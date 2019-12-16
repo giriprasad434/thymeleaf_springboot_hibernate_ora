@@ -1,0 +1,39 @@
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+<script type="text/javascript" src="webjars/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+<script type="text/javascript">
+
+
+
+</script>
+<body>
+	<div th:replace="header :: header"></div>
+	<div class="container overflow-auto"
+		style="width: 800px; height: 500px;">
+		<table class="table table-sm" draggable="true">
+			<thead>
+				<tr>
+					<th scope="col">December</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="message : ${names}">
+					<td><div th:if="${message.first}!=none"></div><img alt="giri" class="img-thumbnail"
+						th:src="@{${message.first}}" style="height: 300px; width: 300px" id="a"/></td>
+					<td><div th:if="${message.Second}!=none"><img alt="giri" class="img-thumbnail"
+						th:src="@{${message.Second}}" style="height: 300px; width: 300px" /></div>
+					</td>
+					<td > <div th:if="${message.third}!=none"><img alt="giri" class="img-thumbnail"
+						th:src="@{${message.third}}" style="height: 300px; width: 300px;"/></div></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

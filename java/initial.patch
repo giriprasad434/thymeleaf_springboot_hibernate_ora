@@ -1,0 +1,14 @@
+Index: NewFile.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- NewFile.xml	(date 1572689816000)
++++ NewFile.xml	(date 1572690476820)
+@@ -236,4 +236,5 @@
+ 		</plugins>
+ 	</build>
+ 	-->
++
+ </project>
+\ No newline at end of file

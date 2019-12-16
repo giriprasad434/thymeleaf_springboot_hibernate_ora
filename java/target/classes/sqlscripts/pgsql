@@ -1,0 +1,122 @@
+﻿DROP TABLE web_messages;
+
+
+
+CREATE TABLE web_messages (
+    wm_id         int PRIMARY KEY NOT NULL,
+    entity_name   VARCHAR(50) NOT NULL,
+    seq_no        int
+);
+
+-- Table: users
+
+-- DROP TABLE users;
+
+CREATE TABLE users
+(
+  id integer,
+  uname character varying(100),
+  password character varying(100),
+  authorities character varying(500) NOT NULL,
+  isaccountnonexpired character(1) NOT NULL,
+  isaccountnonlocked character(1) NOT NULL,
+  iscredentialsnonexpired character(1) NOT NULL,
+  isenabled character(1) NOT NULL
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE users
+  OWNER TO dbo;
+
+select u.authorities,u.* From dbo.users u;
+
+update dbo.users set isAccountNonExpired='Y'
+where id=1
+
+
+ALTER TABLE web_messages ADD column
+    internal_name   VARCHAR(250) NOT NULL,
+  add column  display_name    VARCHAR(250) NOT NULL
+
+END TRANSACTION;
+
+
+    INSERT INTO web_messages VALUES (
+        1,
+        'BANNER',
+        1,
+        'HOME',
+        'HOME'
+    );
+
+    COMMIT;
+
+
+
+    INSERT INTO web_messages VALUES (
+        2,
+        'BANNER',
+        2,
+        'CONTACT',
+        'CONTACT'
+    );
+
+
+
+    INSERT INTO web_messages VALUES (
+        3,
+        'BANNER',
+        3,
+        'B_DROP_DOWN_TITLE',
+        'Menu'
+    );
+
+
+    INSERT INTO web_messages VALUES (
+        4,
+        'BANNER',
+        4,
+        'B_DROP_DOWN_JAVA_SE',
+        'Core Java'
+    );
+
+
+
+    INSERT INTO web_messages VALUES (
+        5,
+        'BANNER',
+        5,
+        'B_DROP_DOWN_ADV_JAVA',
+        'Adv Java'
+    );
+
+
+    INSERT INTO web_messages VALUES (
+        6,
+        'BANNER',
+        6,
+        'B_DROP_DOWN_SPRING',
+        'Spring'
+    );
+
+
+    INSERT INTO web_messages VALUES (
+        7,
+        'BANNER',
+        7,
+        'B_DROP_DOWN_HIBERNATE',
+        'Hibernate'
+    );
+
+    COMMIT;
+
+
+    INSERT INTO web_messages VALUES (
+        8,
+        'BANNER',
+        8,
+        'B_DROP_REACT',
+        'Reactjs'
+    );
+
